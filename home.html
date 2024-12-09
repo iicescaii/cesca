@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- Left Section -->
+      <div class="navbar-left">
+        <a href="#ebrgy" id="ebrgy-link">e-brgyPH</a>
+      </div>
+
+      <!-- Center Navbar Links -->
+      <div class="navbar-center">
+        <a href="home.html" class="nav-link active">Home</a>
+        <a href="request.html" class="nav-link">Document Request</a>
+        <a href="report.html" class="nav-link">Incident Report</a>
+        <a href="officials.html" class="nav-link">Barangay Officials</a>
+        <a href="insights.html" class="nav-link">Comments/Insights</a>
+      </div>
+
+      <!-- Burger Menu -->
+      <div
+        class="burger-menu"
+        id="burger-menu"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Burger Dropdown Menu -->
+      <div
+        class="burger-dropdown"
+        id="burger-dropdown"
+        role="menu"
+        aria-hidden="true"
+      >
+        <a href="home.html" class="dropdown-link active">Home</a>
+        <a href="request.html" class="dropdown-link">Document Request</a>
+        <a href="report.html" class="dropdown-link">Incident Report</a>
+        <a href="officials.html" class="dropdown-link">Barangay Officials</a>
+        <a href="insights.html" class="dropdown-link">Comments/Insights</a>
+        <!-- Logout Button -->
+        <button id="logout-btn" class="dropdown-logout">Logout</button>
+      </div>
+      <!-- Large Screen Logout Button -->
+      <button id="logout-btn-large" class="logout-large">Logout</button>
+    </div>
+
+    <div class="header">
+      <div class="welcome">
+        <img src="pic.jpg" alt="profile" />
+        <div>
+          <h1>Welcome,<span> Maria</span></h1>
+          <p>0922 334 8765</p>
+        </div>
+      </div>
+      <img src="logo.png" alt="Logo" />
+    </div>
+
+    <div class="navigation">
+      <a href="page2.html">
+        <img src="Docreq.jpg" alt="Document Request" />
+        <p>Document Request</p></a
+      >
+      <a href="#"
+        ><img src="report.jpg" alt="Incident Report" />
+        <p>Incident Report</p></a
+      >
+      <a href="page1.html"
+        ><img src="officials.jpg" alt="Baranggay Officials" />
+        <p>Baranggay Officials</p></a
+      >
+      <a href="#"
+        ><img src="Comment.jpg" alt="Comments" />
+        <p>Comments</p></a
+      >
+    </div>
+
+    <section class="feed">
+      <div class="content">
+        <h1>Announcements</h1>
+        <div class="grid">
+          <div>
+            <p>Pares Diwata Overload sumikat!</p>
+          </div>
+          <div>
+            <p>Clarise Mae Elle</p>
+          </div>
+          <div>
+            <p>Maria Angle Mae Perez</p>
+          </div>
+          <div>
+            <p>Francesca Mae Togonon</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="news">
+        <div class="newsfeed">
+          <h1>EVENT: PAGANDAHAN NG YOYO</h1>
+          <img src="" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>

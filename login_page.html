@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="page1_general_style.css">
+    <style>
+        .btn-container a {
+            color: #8099E2;
+            font-size: 1rem;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+            color: #1F3B8B;
+            font-size: 1rem;
+        }
+
+        .register-link a {
+            color: #8099E2;
+            text-decoration: underline;
+            font-size: 1.2rem;
+        }
+
+        img {
+            height: 150px;
+            width: 150px;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color: #1F3B8B;
+        }
+
+        /* Mobile Styling for 0px to 480px */
+        @media (max-width: 480px) {
+            .form-container {
+                border-radius: 0;
+                background: rgb(255, 255, 255);
+            background: linear-gradient(180deg, rgba(255,255,255,1) 28%, rgba(30,58,138,1) 95%);
+            }
+
+            h1 {
+                font-size: 1.2rem; /* Adjust heading size for mobile */
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            img {
+                width: 100px; /* Adjust image size */
+                height: 100px;
+                margin-top: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .register-link, .register-link a {
+                font-size: 0.8rem;
+            }
+
+            .btn-container a {
+                font-size: 0.7rem;
+            }
+
+            .btn-container {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="form-container">
+        <div>
+            <h1>Welcome to <i>E-BRGY</i></h1>
+            <p class="subtitle">Barangay 834 Zone 91</p>
+            <img src="./assets/brgy_logo.png" alt="barangay_logo" width="100px">
+        </div>   
+        <div>
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+        <!-- Username -->
+        <div class="input-item">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              class="input-field"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+  
+          <!-- Password -->
+          <div class="input-item">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="input-field"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" class="btn">Login</button>
+                    <a href="reset_password_email.html">Forgot password</a></p>
+                </div>
+            </form>
+            <div class="register-link">
+                <p>Don't have an account?</p>
+                <a href="register.html">Register</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

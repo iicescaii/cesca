@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Request</title>
+    <link rel="stylesheet" href="request.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- Left Section -->
+      <div class="navbar-left">
+        <a href="#ebrgy" id="ebrgy-link">e-brgyPH</a>
+      </div>
+
+      <!-- Center Navbar Links -->
+      <div class="navbar-center">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="request.html" class="nav-link active">Document Request</a>
+        <a href="report.html" class="nav-link">Incident Report</a>
+        <a href="officials.html" class="nav-link">Barangay Officials</a>
+        <a href="insights.html" class="nav-link">Comments/Insights</a>
+      </div>
+
+      <!-- Burger Menu -->
+      <div
+        class="burger-menu"
+        id="burger-menu"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Burger Dropdown Menu -->
+      <div
+        class="burger-dropdown"
+        id="burger-dropdown"
+        role="menu"
+        aria-hidden="true"
+      >
+        <a href="home.html" class="dropdown-link">Home</a>
+        <a href="request.html" class="dropdown-link active">Document Request</a>
+        <a href="report.html" class="dropdown-link">Incident Report</a>
+        <a href="officials.html" class="dropdown-link">Barangay Officials</a>
+        <a href="insights.html" class="dropdown-link">Comments/Insights</a>
+
+        <!-- Logout Button -->
+        <button id="logout-btn" class="dropdown-logout">Logout</button>
+      </div>
+      <!-- Large Screen Logout Button -->
+      <button id="logout-btn-large" class="logout-large">Logout</button>
+    </div>
+
+    <section id="document-request-form">
+      <h2>Document Request</h2>
+      <form action="request.php" method="POST" enctype="multipart/form-data">
+        <!-- Full Name -->
+        <label for="fullname">Full Name</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          placeholder="ex.Juan Dela Cruz"
+          required
+        />
+
+        <!-- Date -->
+        <label for="date">Date</label>
+        <input type="date" id="date" name="date" required />
+
+        <!-- Purpose -->
+        <label for="purpose">Purpose</label>
+        <select id="purpose" name="purpose" required>
+          <option value="" disabled selected>Select Purpose Type</option>
+          <option value="business">Business</option>
+          <option value="personal">Personal</option>
+          <option value="legal">Legal</option>
+          <option value="employment_application">Employment Application</option>
+          <option value="proof_of_address">Proof of Address</option>
+          <option value="proof_of_identity">Proof of Identity</option>
+          <option value="loan_application">Loan Application</option>
+        </select>
+
+        <!-- Document -->
+        <label for="document">Document</label>
+        <select id="document" name="document" required>
+          <option value="" disabled selected>Select Document Type</option>
+          <option value="birth_certificate">Barangay Clearance</option>
+          <option value="marriage_certificate">Marriage Certificate</option>
+          <option value="residency_certificate">Residency Certificate</option>
+          <option value="business_permit">Business Permit</option>
+          <option value="Barangay_certicate">Barangay Certificate</option>
+          <option value="barangay_id_card">Barangay ID Card</option>
+        </select>
+
+        <!-- Email Address -->
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="ex.juandela@gmail.com"
+          required
+        />
+
+        <!-- Select ID Type -->
+        <label for="id-type">Select ID Type</label>
+        <select id="id-type" name="id-type" required>
+          <option value="" disabled selected>Select Valid ID</option>
+          <option value="Barangay_ID">Barangay ID</option>
+          <option value="National_ID">National ID</option>
+          <option value="Passport">Passport</option>
+          <option value="Driver's_License">Driver's License</option>
+          <option value="SSS_ID">SSS ID</option>
+          <option value="PRC_ID">PRC ID</option>
+          <option value="Senior_Citizen_ID">Senior Citizen ID</option>
+          <option value="School_ID">School ID</option>
+          <option value="PhilHealth_ID">PhilHealth ID</option>
+          <option value="PWD_ID">PWD ID</option>
+        </select>
+
+        <!-- Attach ID -->
+        <label for="id-photo">Attach ID</label>
+        <div class="container">
+          <button onclick="document.getElementById('id-photo').click()">
+            Upload Photo Here
+          </button>
+          <input
+            type="file"
+            id="id-photo"
+            name="id-photo"
+            accept="image/*"
+            required
+          />
+          <img id="uploaded-photo" src="" alt="Uploaded Photo" />
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submitbut">Submit Request</button>
+      </form>
+    </section>
+
+    <!-- Optional JavaScript for functionality -->
+    <script src="app.js"></script>
+  </body>
+</html>

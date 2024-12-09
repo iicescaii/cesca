@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    0deg,
+    rgba(107, 129, 190, 1) 12%,
+    rgba(195, 211, 255, 1) 79%
+  );
+  height: auto;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Dropdown Menu - Hidden by Default */
+.burger-dropdown {
+  display: none;
+  flex-direction: column;
+  background-color: #1e3a8a;
+  position: absolute;
+  top: 100%; /* Dropdown appears below navbar */
+  right: 0; /* Align dropdown to the right */
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Dropdown Links */
+.burger-dropdown .dropdown-link {
+  color: #ffffff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.burger-dropdown .dropdown-link:hover {
+  background-color: #3c6fc7;
+}
+
+/* Logout Button Styling */
+.dropdown-logout {
+  color: #fff;
+  background-color: #dc3545; /* Red color for logout */
+  margin: 10px 20px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
+}
+
+.dropdown-logout:hover {
+  background-color: #c82333;
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.8);
+}
+
+/* Burger Menu for Small Screens */
+.burger-menu {
+  display: none; /* Hidden on large screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+#logout-btn {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545; /* Red background */
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#logout-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.8);
+}
+
+/* Large Screen Logout Button Styling */
+.logout-large {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #dc3545; /* Red background */
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.logout-large:hover {
+  background-color: #c82333; /* Darker red on hover */
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.8);
+}
+
+/* Navbar Styling */
+.navbar {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e3a8a; /* Navbar background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 5%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Left Logo Link */
+.navbar-left a {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-size: 32px;
+  background: linear-gradient(
+    90deg,
+    rgba(214, 69, 73, 1) 35%,
+    rgb(59, 56, 220) 60%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* Center Navbar Links */
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-center .nav-link {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active,
+.dropdown-link.active {
+  color: #5f82e9; /* Highlight active link */
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(95, 130, 233, 0.5);
+}
+
+.navbar-center .nav-link:hover {
+  color: #5f82e9; /* Change color on hover */
+  text-shadow: 0 0 10px rgba(107, 129, 190, 1);
+}
+
+/* Right Navbar Section */
+.navbar-right {
+  padding-right: 20px;
+}
+
+#document-request-form {
+  width: 70%;
+  max-width: 800px;
+  background: white;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#document-request-form h2 {
+  font-family: poppins;
+  font-weight: bold;
+  color: #1e3a8a;
+  padding: 20px;
+}
+label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.container input {
+  opacity: 0%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.container {
+  border: 1px solid #4e4e4e;
+  transition: 0.3s all ease-in-out;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.photobutton img {
+  height: 100%;
+  width: 100%;
+}
+.container:hover {
+  box-shadow: 0 0 25px rgba(92, 92, 92, 0.73);
+}
+input,
+select {
+  width: 100%;
+  padding: 12px 0px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#id-photo {
+  width: 286px;
+  height: 219.5px;
+}
+form {
+  width: 100%;
+}
+
+.submitbut {
+  background-color: #1e3a8a;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.submitbut:hover {
+  background-color: #0e2052;
+}
+
+@media (max-width: 768px) {
+  .logout-large {
+    display: none;
+  }
+  .burger-menu {
+    display: flex; /* Show burger menu */
+  }
+
+  .navbar {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar-center {
+    display: none; /* Hide center links on mobile */
+  }
+
+  /* Burger Dropdown */
+  .burger-dropdown {
+    display: none; /* Initially hidden */
+  }
+
+  .burger-dropdown.active {
+    display: flex; /* Show dropdown when toggled */
+  }
+
+  .navbar a {
+    font-size: 16px;
+  }
+
+  .navbar-right {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  #ebrgy-link {
+    font-size: 22px;
+    padding: 14px 0;
+  }
+  #document-request-form {
+    width: 80%;
+    padding: 10px 10px 30px 10px;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input,
+  select {
+    font-size: 16px;
+  }
+}
